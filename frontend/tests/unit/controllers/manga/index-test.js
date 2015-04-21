@@ -5,7 +5,7 @@ import {
 
 moduleFor('controller:manga/index', 'MangaIndexController', {
   // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
+  needs: ['controller:current-user']
 });
 
 // Replace this with your real tests.
