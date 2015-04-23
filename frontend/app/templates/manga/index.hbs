@@ -47,11 +47,11 @@
         </div>
 
         {{#if currentUser.isSignedIn}}
-          <div {{bind-attr class=":user-actions libraryEntryExists::no-entry"}}>
+          <div {{bind-attr class=":user-actions mangaLibraryEntryExists::no-entry"}}>
             <div class="btn-group">
 
               <button {{bind-attr class=":library-button :library-entry :dropdown-toggle libraryStatus:active"}} type="button" data-toggle="dropdown">
-                {{#if mangalibraryEntryExists}}
+                {{#if mangaLibraryEntryExists}}
                   {{mangaLibraryEntry.status}}&nbsp;&nbsp;<i {{bind-attr class=":fa :fa-caret-down"}}></i>
                 {{else}}
                   Add to Library&nbsp;&nbsp;<i {{bind-attr class=":fa :fa-caret-down"}}></i>
@@ -67,7 +67,7 @@
                 <li><a {{action "removeFromLibrary"}}>Remove from Library</a></li>
               </ul>
             </div>
-            {{#if libraryEntryExists}}
+            {{#if mangaLibraryEntryExists}}
               <div class="personal-rating active">
                 {{awesome-rating type=currentUser.ratingType editable="true" action="setLibraryRating" rating=libraryEntry.rating}}
               </div>
