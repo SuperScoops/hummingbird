@@ -1,10 +1,12 @@
 <ul class="cast">
-  {{#each featuredCastings}}
-    <li class="casting">
-      <a class="character">
-        <img {{bind-attr src=character.image}} width="30" height="47">
-        {{character.name}}
-      </a>
+  {{#each displayCast}}
+    <li class="character-wrapper">
+      <div class="cast-image">
+        <img class="character" {{bind-attr src=character.image}}>
+      </div>
+      <div class="cast-name">
+        <h4>{{character.name}}</h4>
+      </div>
     </li>
   {{/each}}
 </ul>
